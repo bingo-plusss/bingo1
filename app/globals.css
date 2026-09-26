@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --page: #f5f6f4;
+  --surface: #ffffff;
+  --surface-2: #f3f4f1;
+  --ink: #111512;
+  --ink-2: #4a514c;
+  --muted: #7c837e;
+  --line: #e2e5e0;
+  --axis: #c3c7c1;
+  --brand: #0f5f4a;
+  --brand-ink: #ffffff;
+
+  /* status: green = profit, amber = break-even / low, red = loss, blue = capital/revenue */
+  --profit: #0a7d3b;
+  --profit-mark: #16a34a;
+  --profit-soft: #e7f6ec;
+  --warn: #8a5a00;
+  --warn-mark: #eda100;
+  --warn-soft: #fdf4dc;
+  --loss: #b42323;
+  --loss-mark: #d03b3b;
+  --loss-soft: #fdeaea;
+  --info: #1f5fb0;
+  --info-mark: #2a78d6;
+  --info-soft: #e8f1fc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0f0e;
+    --surface: #171a18;
+    --surface-2: #1f2320;
+    --ink: #f3f5f2;
+    --ink-2: #c1c7c2;
+    --muted: #8b928d;
+    --line: #2b302c;
+    --axis: #3b413c;
+    --brand: #3fb68f;
+    --brand-ink: #06130e;
+
+    --profit: #4ade80;
+    --profit-mark: #22c55e;
+    --profit-soft: #10271a;
+    --warn: #fbbf24;
+    --warn-mark: #e0a000;
+    --warn-soft: #2a2310;
+    --loss: #f87171;
+    --loss-mark: #e66767;
+    --loss-soft: #2d1414;
+    --info: #7cb3f2;
+    --info-mark: #3987e5;
+    --info-soft: #122236;
+  }
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-profit: var(--profit);
+  --color-profit-mark: var(--profit-mark);
+  --color-profit-soft: var(--profit-soft);
+  --color-warn: var(--warn);
+  --color-warn-mark: var(--warn-mark);
+  --color-warn-soft: var(--warn-soft);
+  --color-loss: var(--loss);
+  --color-loss-mark: var(--loss-mark);
+  --color-loss-soft: var(--loss-soft);
+  --color-info: var(--info);
+  --color-info-mark: var(--info-mark);
+  --color-info-soft: var(--info-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), system-ui, "Segoe UI", sans-serif;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="range"] {
+  accent-color: var(--brand);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 0.4;
+}
